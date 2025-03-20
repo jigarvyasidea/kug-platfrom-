@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 240, 240, 240;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.kotlin-gradient {
+  background: linear-gradient(90deg, #7f52ff 0%, #1a73e8 100%);
+}
+
+.kotlin-button {
+  @apply bg-kotlin-purple hover:bg-kotlin-blue text-white font-bold py-2 px-4 rounded transition-colors duration-300;
+}
+
+.kotlin-button-secondary {
+  @apply bg-white hover:bg-gray-100 text-kotlin-purple border border-kotlin-purple font-bold py-2 px-4 rounded transition-colors duration-300;
+}
+
+.kotlin-card {
+  @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300;
+}
+
+.kotlin-input {
+  @apply border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-kotlin-purple focus:border-transparent;
+}
+
+.kotlin-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-kotlin-purple bg-opacity-10 text-kotlin-purple;
+}
+
+.kotlin-badge-orange {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-kotlin-orange bg-opacity-10 text-kotlin-orange;
+}
+
+.kotlin-badge-blue {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-kotlin-blue bg-opacity-10 text-kotlin-blue;
+}
